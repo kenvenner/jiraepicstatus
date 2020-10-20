@@ -1,0 +1,44 @@
+Field information in our instance
+{   'clauseNames': ['cf[10010]', 'Epic Status'],
+    'custom': True,
+    'id': 'customfield_10010',
+    'key': 'customfield_10010',
+    'name': 'Epic Status',
+    'navigable': True,
+    'orderable': True,
+    'schema': {   'custom': 'com.pyxis.greenhopper.jira:gh-epic-status',
+                  'customId': 10010,
+                  'type': 'option'},
+    'searchable': True,
+    'untranslatedName': 'Epic Status'}
+--------------------------------------------------------------------------------
+Current value for this field
+{'self': 'https://<your-instance-domain>/rest/api/2/customFieldOption/10001', 'value': 'To Do', 'id': '10001'}
+--------------------------------------------------------------------------------
+update json payload:
+{'customfield_10010': {'value': 'In Progress'}}
+400 Client Error:  for url: https://<your-instance-domain>/rest/api/2/issue/NCCWEB-7919
+--------------------------------------------------------------------------------
+update json payload:
+{'customfield_10010': [{'value': 'In Progress'}]}
+400 Client Error:  for url: https://<your-instance-domain>/rest/api/2/issue/NCCWEB-7919
+--------------------------------------------------------------------------------
+update json payload:
+{'customfield_10010': {'value': 'In Progress'}}
+400 Client Error:  for url: https://<your-instance-domain>/rest/api/2/issue/NCCWEB-7919
+--------------------------------------------------------------------------------
+update json payload:
+{'customfield_10010': 'In Progress'}
+400 Client Error:  for url: https://<your-instance-domain>/rest/api/2/issue/NCCWEB-7919
+--------------------------------------------------------------------------------
+update json payload:
+{'fields': {'customfield_10010': {'value': 'In Progress'}}}
+400 Client Error:  for url: https://<your-instance-domain>/rest/api/2/issue/NCCWEB-7919
+--------------------------------------------------------------------------------
+update json payload:
+{'fields': {'customfield_10006': {'value': 'In Progress'}}}
+400 Client Error:  for url: https://<your-instance-domain>/rest/api/2/issue/NCCWEB-7919
+--------------------------------------------------------------------------------
+update json payload:
+{'customfield_10006': {'value': 'In Progress'}}
+400 Client Error:  for url: https://<your-instance-domain>/rest/api/2/issue/NCCWEB-7919
