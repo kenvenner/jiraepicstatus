@@ -4,7 +4,7 @@ pp = pprint.PrettyPrinter(indent=4)
 
 from atlassian import Jira
 
-url= 'your-url',
+url= 'your-url'
 username= 'your-account'
 token='your-token-or-password'
 ticket='your-ticket-number'
@@ -30,13 +30,18 @@ print('Field information in our instance')
 jirafld = 'Epic Status'
 jira_find_field( jira, jirafld )
 # try different structures
+epicstatus='In Progress'
 jira_epic_done_field_formats = [
-    { "customfield_10010" : [{"value" : "Done",}],},
-    { "customfield_10010" : {"value" : "Done",},},
-    { "customfield_10010" : "Done" },
-    { "fields" : { "customfield_10010" : {"value" : "Done",},},},
-    { "fields" : { "customfield_10006" : {"value" : "Done",},},},
-    { "customfield_10006" : {"value" : "Done",},},
+    {"customfield_10010":
+         {"value": epicstatus
+          }
+    },
+    { "customfield_10010" : [{"value" : epicstatus,}],},
+    { "customfield_10010" : {"value" : epicstatus,},},
+    { "customfield_10010" : epicstatus },
+    { "fields" : { "customfield_10010" : {"value" : epicstatus,},},},
+    { "fields" : { "customfield_10006" : {"value" : epicstatus,},},},
+    { "customfield_10006" : {"value" : epicstatus,},},
 ]
 print('-'*80)
 print('Current value for this field')
